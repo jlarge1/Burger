@@ -11,3 +11,9 @@ app.set("view engine", "handlebars");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+require("./config/connection")(app);
+
+app.listen(PORT, function() {
+    console.log("App listening on PORT: " + PORT);
+  });
