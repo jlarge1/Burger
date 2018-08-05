@@ -1,11 +1,13 @@
-<h1>Eat the Burger!</h1>
+<div class="jumbotron">
+    <h1>Eat the Burger!</h1>
+</div>
 
 <div class="left">
     <h2>Burgers!</h2>
     <ul>
         {{#each burger}} {{#unless devoured}}
         <p>
-            {{this.id}} {{this.burger_name}} {{this.devoured}}
+            {{this.burger_name}}
             <button data-id="{{this.id}}" class="devourBurger">Devour</button>
             <button data-id="{{this.id}}" class="deleteBurger">Remove</button>
         </p>
@@ -18,7 +20,7 @@
     <ul>
         {{#each burger}} {{#if devoured}}
         <p>
-            {{this.id}} {{this.burger_name}}
+            {{this.burger_name}}
             <button data-id="{{this.id}}" class="deleteBurger">Remove</button>
         </p>
         {{/if}} {{/each}}
@@ -29,7 +31,7 @@
 <form class="create-form">
     <div class="form-group">
         <label for="burg"></label>
-        <textarea id="burg" name="burger" rows="8" cols="40"></textarea>
+        <textarea id="burg" name="burger" rows="8" cols="30"></textarea>
     </div>
 
     <button type="submit">Add Burger</button>
